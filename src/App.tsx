@@ -1,13 +1,17 @@
-import { Button } from "@/components/ui/button"
+import { Route, Routes } from "react-router-dom"
+import RootLayout from "./pages/RootLayout"
+import HomePage from "./pages/HomePage"
 
 
 function App() {
 
 
   return (
-    <Button>
-      <i className="fa-solid fa-user"></i>
-    </Button>
+    <Routes>
+      <Route element={<RootLayout />} >
+        <Route index element={<HomePage />} />
+      </Route>
+    </Routes>
   )
 }
 
