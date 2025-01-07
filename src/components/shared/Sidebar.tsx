@@ -16,7 +16,7 @@ const Sidebar: React.FC<SidebarProps> = ({ open, setOpen }) => {
 
   return (
     <div className={`fixed top-0 ${open ? "left-0" : 'left-[-250px]'} w-[250px] shadow 
-    bg-white h-screen p-2 delay-300 transition-all ease-in-out`}>
+    bg-white h-screen p-2 delay-300 transition-all ease-in-out z-50`}>
       <div className='flex items-center justify-between gap-4 '>
         <div className='w-20 md:w-24 '>
           <img src="./logo.png" className='w-full' alt="" />

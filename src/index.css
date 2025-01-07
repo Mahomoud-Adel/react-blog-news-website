@@ -59,6 +59,13 @@
   }
 }
 
+.match {
+  background-image: url("../public/image-background.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 @layer base {
   * {
     @apply border-border;
@@ -67,3 +74,4 @@
     @apply bg-background text-foreground;
   }
 }
+
