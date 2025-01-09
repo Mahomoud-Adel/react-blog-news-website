@@ -6,6 +6,7 @@ import ProfilePage from "./pages/ProfilePage"
 import SavedPostPage from "./pages/SavedPostPage"
 import UserPostPage from "./pages/UserPostPage"
 import WritePage from "./pages/WritePage"
+import PostsPage from "./pages/PostsPage"
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
       <Route path="/" element={<RootLayout />} >
         <Route index element={<HomePage />} />
         <Route path="/single-post" element={<SinglePost />} />
+        <Route path="/posts" element={<PostsPage />} />
         <Route  element={<ProfilePage />} >
           <Route path="/profile" element={<UserPostPage />} />
           <Route path="/saved" element={<SavedPostPage />} />
