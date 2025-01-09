@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { Button } from '../ui/button'
 
 const PostItem = () => {
+  const isUser = true;
   return (
     <div className="rounded-md shadow-lg p-2 w-full">
       <div className="rounded-md overflow-hidden">
@@ -33,9 +34,15 @@ const PostItem = () => {
             <span className="text-gray-500">August 18 , 2022</span>
           </div>
         </Link>
-        <Button size={"icon"} variant={"ghost"}>
-          <i className="fa-regular fa-bookmark"></i>
-        </Button>
+        {!isUser ? (
+          <Button size={"icon"} variant={"ghost"}>
+            <i className="fa-regular fa-bookmark"></i>
+          </Button>
+        ) : (
+          <Button size={"icon"} variant={"outline"}>
+            <i className="fa-solid fa-trash-can text-red-500"></i>
+          </Button>
+        )}
       </div>
     </div>
   )
